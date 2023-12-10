@@ -138,6 +138,7 @@
                     <ul class="py-2"><NuxtLink to="/dharma_wanita/halaman_utama_dw">Halaman Utama Dharma Wanita</NuxtLink></ul>
                     <ul class="py-2"><NuxtLink to="/dharma_wanita/profil_dw">Profil Dharma Wanita</NuxtLink></ul>
                     <ul class="py-2"><NuxtLink to="/dharma_wanita/struktur_organisasi_dw">Struktur Organisasi Dharma Wanita</NuxtLink></ul>
+                    <ul class="py-2"><NuxtLink to="/dharma_wanita/program_kerja">Program Kerja Dharma Wanita</NuxtLink></ul>
                     <ul class="py-2"><NuxtLink to="/dharma_wanita/kegiatan_dw">Kegiatan Dharma Wanita</NuxtLink></ul>
                 </div>
             </div>
