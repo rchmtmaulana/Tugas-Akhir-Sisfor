@@ -1,24 +1,49 @@
 <script setup>
 import Header from "../components/halaman_utama/header.vue";
 import Footer from "../components/halaman_utama/footer.vue";
+import { ref, computed, onMounted } from 'vue';
+
+const endpoint = "http://localhost:8055/items/Akademik/6"
+const kalenderData = ref([]);
+
+async function getKalender() {
+  const api = await fetch(endpoint)
+  const data = await api.json()
+  console.log(data.data)
+  kalenderData.value = data.data;
+}
+
+onMounted(() => {
+  getKalender();
+})
+
+const getImageUrl = (imageName) => {
+  return `http://localhost:8055/assets/${imageName}`;
+};
 </script>
 
 <template>
-    <Header/>
-    <div class="slug flex w-full text-white" style="height: 120px; margin-top: 130px; width: 100%;">
-        <img src="/home.png" alt="error" class="" style="margin: 0px 0px 0px 210px; padding-top: 28px; width: 30px; height: 60px;" />
-        <p style="margin: 0px 0px 0px 10px; padding-top: 30px; font-size: 20px; font-family: Times New Roman Thin;">Akademik > Kalender Akademik</p>
-    </div>
-    <div  Style="background-color: #d3d3dd">
-        <section class="flex justify-center relative" style="height: 700px">
-            <div class="content offside max-w-screen-xl w-full bg-white border rounded-xl overflow-hidden" style="height: 750px; margin-top: -30px;">
-                <div class="pb-5">
-                <h1 class="font-bold pt-5 text-center" style="font-family: Times New Roman Thin; font-size: 40px">Kalender Akademik Unhas Tahun Akademik 2022/2023</h1>
-                </div>
-            </div>
-        </section>
-    </div>
-    <Footer/>
+  <Header/>
+  <div class="slug flex w-full text-white" style="height: 120px; margin-top: 130px; width: 100%;">
+    <NuxtLink to="/">
+      <img src="/home.png" alt="error" style="margin: 0px 0px 0px 210px; padding-top: 28px; width: 30px; height: 60px;" />
+      <p style="margin: 0px 0px 0px 5px; padding-top: 30px; font-size: 20px; font-family: Times New Roman Thin;">Halaman</p>
+    </NuxtLink>
+    <p style="margin: 0px 0px 0px 5px; padding-top: 30px; font-size: 20px; font-family: Times New Roman Thin; display: flex"> > <span style="margin-left: 5px;" v-html="kalenderData.nama_halaman"></span></p>
+  </div>
+  <div Style="background-color: #d3d3dd">
+      <section class="flex justify-center relative">
+          <div class="content offside max-w-screen-xl w-full bg-white border rounded-xl overflow-hidden object-center" style=" margin-top: -30px; padding: 0px 200px 0px 200px;">
+              <div class="flex justify-center mt-16">
+                    <div>
+                      <img :src="getImageUrl(kalenderData.gambar)" :alt="`kalender ${kalenderData.id}`" class="w-full object-cover rounded-md object-center" style="height: 1400px; width: 900px;">
+                      <img :src="getImageUrl(kalenderData.gambar2)" :alt="`kalender ${kalenderData.id}`" class="w-full object-cover rounded-md object-center" style="height: 1400px; width: 900px;">
+                    </div> 
+              </div>
+          </div>
+      </section>
+  </div>
+  <Footer/>
 </template>
 
 <style>
