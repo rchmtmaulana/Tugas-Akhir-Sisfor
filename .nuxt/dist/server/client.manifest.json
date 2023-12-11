@@ -7,12 +7,12 @@
     "module": true,
     "resourceType": "script"
   },
-  "D:/Kuliah/Semester 5/Tugas/Sistem Informasi/Tugas-Akhir-Sisfor/node_modules/nuxt/dist/app/entry.js": {
+  "D:/KULIAH/5. SEMESTER 5/Sistem Informasi/Tugas-Akhir-Sisfor/node_modules/nuxt/dist/app/entry.js": {
     "resourceType": "script",
     "module": true,
     "prefetch": true,
     "preload": true,
     "isEntry": true,
-    "file": "D:/Kuliah/Semester 5/Tugas/Sistem Informasi/Tugas-Akhir-Sisfor/node_modules/nuxt/dist/app/entry.js"
+    "file": "D:/KULIAH/5. SEMESTER 5/Sistem Informasi/Tugas-Akhir-Sisfor/node_modules/nuxt/dist/app/entry.js"
   }
 }
