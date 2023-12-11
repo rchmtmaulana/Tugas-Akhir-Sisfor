@@ -53,19 +53,20 @@ function changePage(page) {
             <h1 class="font-bold pt-5 text-center" style="font-family: Times New Roman Thin; font-size: 40px">Berita</h1>
           </div>
           <div class="grid grid-cols-3 gap-16 mt-8 mx-10">
-            <div v-for="newsItem in paginatedBerita" :key="newsItem.id" class="flex flex-col items-center -my-4">
-              <img :src="getImageUrl(newsItem.gambar)" alt="News Image" style="height: 200px;" class="w-full h-40 object-cover mb-2" />
-              <h2 class="text-lg font-semibold" v-html="newsItem.judul" style="font-size: 15px;"></h2>
-              <div class="flex items-center">
-                <img src="/calendar.jpg" alt="error" class="w-4 h-4 mr-2" />
-                <p class="text-sm text-grey">{{ newsItem.tanggal }}</p>
-              </div>
+            <div v-for="newsItem in paginatedBerita" :key="newsItem.id">
+              <NuxtLink :to="'/profil/berita/' + newsItem.id" class="flex flex-col items-center -my-4">
+                <img :src="getImageUrl(newsItem.gambar)" alt="News Image" style="height: 200px;" class="w-full h-40 object-cover mb-2" />
+                <h2 class="text-lg font-semibold" v-html="newsItem.judul" style="font-size: 15px;"></h2>
+                <div class="flex items-center">
+                  <img src="/calendar.jpg" alt="error" class="w-4 h-4 mr-2" />
+                  <p class="text-sm text-grey">{{ newsItem.tanggal }}</p>
+                </div>
+              </NuxtLink>
             </div>
           </div>
           <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 mb-20">
-            <button v-for="page in totalPages" :key="page" @click="changePage(page)" :class="{ 'bg-blue-500 text-white': currentPage === page, 'bg-gray-200': currentPage !== page }" class="mx-2 px-6 py-2 rounded cursor-pointer">
-              {{ page }}
-            </button>
+            <button @click="changePage(currentPage - 1)" :disabled="currentPage === 1" class="mx-2 px-6 py-2 rounded cursor-pointer" :class="{ 'bg-blue-500 text-white': currentPage > 1, 'bg-gray-200': currentPage === 1 }">&#8592; Sebelumnya</button>
+            <button @click="changePage(currentPage + 1)" :disabled="currentPage === totalPages" class="mx-2 px-6 py-2 rounded cursor-pointer" :class="{ 'bg-blue-500 text-white': currentPage < totalPages, 'bg-gray-200': currentPage === totalPages }">Selanjutnya &#8594;</button>
           </div>
         </div>
       </section>
