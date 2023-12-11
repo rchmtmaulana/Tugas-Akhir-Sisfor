@@ -1,7 +1,7 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue';
 
-const endpoint = "http://localhost:8055/items/Informasi"
+const endpoint = "http://localhost:8055/items/Informasi?sort=id&filter={%22id%22:{%22_gte%22:1,%22_lte%22:6}}"
 const informasiData = ref([]);
 
 async function getInformasi() {
@@ -39,7 +39,7 @@ const getImageUrl = (imageName) => {
 
       <div class="mt-12 flex justify-center">
         <button class="rounded-xl px-6 py-3 bg-gray-800 text-white">
-          SELENGKAPNYA
+          <NuxtLink to="/informasi">SELENGKAPNYA</NuxtLink>
         </button>
       </div>
     </div>
