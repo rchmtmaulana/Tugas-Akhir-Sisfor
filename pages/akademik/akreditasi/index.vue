@@ -29,7 +29,7 @@ onMounted(() => {
   </div>
   <div Style="background-color: #d3d3dd">
       <section class="flex justify-center relative">
-          <div class="content offside py-10 px-20 max-w-screen-xl w-full bg-white border rounded-xl">
+          <div class="content offside px-20 max-w-screen-xl w-full bg-white border rounded-xl">
               <p class="text-lg" v-html="akreditasiData.konten"></p>
           </div>
       </section>

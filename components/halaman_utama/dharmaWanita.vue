@@ -31,12 +31,7 @@
       </div>
     </div>
     <div class="grid justify-items-end">
-      <NuxtLink :to="{ name: 'utamadharmawanita'}"
-        class="rounded-full py-[0.8rem] px-[2.5rem]"
-        style="background-color: rgb(76, 89, 101); color: white"
-      >
-        SELENGKAPNYA
-      </NuxtLink>
+      <NuxtLink to="/dharma_wanita/halaman_utama_dw" class="rounded-full py-[0.8rem] px-[2.5rem]" style="background-color: rgb(76, 89, 101); color: white">SELENGKAPNYA</NuxtLink>
     </div>
   </section>
 </template>
