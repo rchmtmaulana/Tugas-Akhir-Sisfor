@@ -10,8 +10,8 @@ import Footer from "../components/halaman_utama/footer.vue";
         <p style="margin: 0px 0px 0px 10px; padding-top: 30px; font-size: 20px; font-family: Times New Roman Thin;">Dharma Wanita > Kegiatan Dharma Wanita</p>
     </div>
     <div  Style="background-color: #d3d3dd">
-        <section class="flex justify-center relative" style="height: 700px">
-            <div class="content offside max-w-screen-xl w-full bg-white border rounded-xl overflow-hidden" style="height: 750px; margin-top: -30px;">
+        <section class="flex justify-center relative" style="height: 300px">
+            <div class="content offside max-w-screen-xl w-full bg-white border rounded-xl overflow-hidden" style="height: 350px; margin-top: -30px;">
                 <div class="pb-5">
                 <h1 class="font-bold pt-5 text-center" style="font-family: Times New Roman Thin; font-size: 40px">Kegiatan Dharma Wanita</h1>
                 </div>
