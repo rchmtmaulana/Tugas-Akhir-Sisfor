@@ -55,14 +55,11 @@ const getImageUrl = (imageName) => {
         <section class="flex justify-center relative">
             <div class="content offside max-w-screen-xl w-full bg-white border rounded-xl overflow-hidden flex flex-col items-center  " style=" margin-top: -30px; padding: 40px 0px 0px 0px;">
                 <p class="text-lg " v-html="dharmawanitaData.konten"></p>
-                <div class="grid grid-cols-3 gap-8 items-center text-center" style="margin: 0px 50px 0px 50px;">
+                <div class="grid grid-cols-3 gap-8 items-center text-center pb-10" style="margin: 0px 50px 0px 50px;">
                     <div v-for="galeridw in galeridwData" :key="galeridwData.id" class="text-center">
                         <img :src="getImageUrl(galeridw.gambar)" alt="News Image" style="height: 200px;" class="w-full h-40 object-cover mb-0" />
                         <h2 class="text-lg font-semibold " v-html="galeridw.judul" style="font-size: 15px;"></h2>
                     </div>
-                </div>
-                <div class="text-center mt-14 mb-14">
-                    <h2 class="text-lg font-bold" style="font-size: 24px;">BERITA DHARMA WANITA</h2>
                 </div>
             </div>
         </section>

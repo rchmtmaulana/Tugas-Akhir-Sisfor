@@ -1,1 +1,1 @@
-export { default } from "file:///D:/Kuliah/Semester%205/Tugas/Sistem%20Informasi/Tugas-Akhir-Sisfor/node_modules/@nuxt/vite-builder/dist/runtime/vite-node.mjs"
+export { default } from "file:///D:/KULIAH/5.%20SEMESTER%205/Sistem%20Informasi/Tugas-Akhir-Sisfor/node_modules/@nuxt/vite-builder/dist/runtime/vite-node.mjs"
